@@ -17,3 +17,5 @@ print(Teste.teste())
 print(Teste().teste2())
 
 print(dt)
+
+print(1 == 1)
