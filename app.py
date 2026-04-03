@@ -11,3 +11,5 @@ class Teste:
     
     def teste2():
         return 2
+    
+continue
