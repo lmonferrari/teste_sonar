@@ -19,3 +19,4 @@ print(Teste().teste2())
 print(dt)
 
 print(1 == 1)
+print(2 == 2)
