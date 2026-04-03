@@ -14,6 +14,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Cache sonar
+        uses: actions/cache@v4
+        with:
+          path: ~/.sonar/cache
+          key: sonar-cache
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v2
