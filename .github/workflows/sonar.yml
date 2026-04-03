@@ -25,6 +25,4 @@ jobs:
             -v ${{ github.workspace }}:/usr/src \
             sonarsource/sonar-scanner-cli \
             -Dsonar.projectKey=teste-local \
-            -Dsonar.sources=. \
-            -Dsonar.host.url=$SONAR_HOST_URL \
-            -Dsonar.token=$SONAR_TOKEN
+            -Dsonar.sources=.
