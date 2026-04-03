@@ -28,6 +28,7 @@ jobs:
         env:
           SONAR_HOST_URL: http://host.docker.internal:9000
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_SCANNER_VERSION: 9.9.0.12345
 
       - name: Quality Gate
         uses: SonarSource/sonarqube-quality-gate-action@v1
