@@ -12,3 +12,6 @@ class Teste:
     
     def teste2(self):
         return 2
+    
+break
+continue
