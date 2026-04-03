@@ -14,3 +14,4 @@ class Teste:
         return 2
     
 break
+continue
