@@ -21,6 +21,10 @@ jobs:
         run: |
           docker run --rm \
             -e SONAR_HOST_URL="https://comprehensibly-gnathonic-fabiola.ngrok-free.dev" \
-            -e SONAR_LOGIN="${{ secrets.SONAR_TOKEN }}" \
+            -e SONAR_TOKEN="${{ secrets.SONAR_TOKEN }}" \
             -v ${{ github.workspace }}:/usr/src \
-            sonarsource/sonar-scanner-cli
+            sonarsource/sonar-scanner-cli \
+            -Dsonar.projectKey=teste-local \
+            -Dsonar.sources=. \
+            -Dsonar.host.url=$SONAR_HOST_URL \
+            -Dsonar.token=$SONAR_TOKEN
