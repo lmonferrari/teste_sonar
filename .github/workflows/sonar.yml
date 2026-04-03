@@ -14,6 +14,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Test connection
+        run: curl -I https://comprehensibly-gnathonic-fabiola.ngrok-free.dev
+
       - name: SonarQube Scan
         run: |
           docker run --rm \
