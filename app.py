@@ -17,3 +17,5 @@ print(Teste.teste())
 print(Teste().teste2())
 
 print(dt)
+print(dt.astimezone(pytz.timezone('America/Sao_Paulo')))
+print(1 == 1)
