@@ -35,3 +35,12 @@ jobs:
         timeout-minutes: 5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: Cleanup SonarScanner Docker
+        if: always()
+        run: |
+          echo "Removendo containers SonarScanner temporários..."
+          docker ps -a --filter "ancestor=sonarsource/sonar-scanner-cli" --format "{{.ID}}" | xargs -r docker rm -f
+
+          echo "Removendo imagens SonarScanner antigas..."
+          docker images --filter "reference=b25df6" --format "{{.ID}}" | xargs -r docker rmi -f || true
