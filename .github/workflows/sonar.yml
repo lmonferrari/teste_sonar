@@ -17,12 +17,13 @@ jobs:
       - name: SonarQube Scan
         run: |
           docker run --rm \
-            -v ${{ github.workspace }}:/usr/src \
+            -v $GITHUB_WORKSPACE:/usr/src \
             -e SONAR_HOST_URL="http://host.docker.internal:9000" \
             -e SONAR_TOKEN="${{ secrets.SONAR_TOKEN }}" \
-            sonar-scanner-fixed:latest -- \
-            -Dsonar.projectKey=teste-local \
-            -Dsonar.sources=.
+            sonar-scanner-fixed:latest \
+            sonar-scanner \
+              -Dsonar.projectKey=teste-local \
+              -Dsonar.sources=.
 
       - name: Quality Gate
         uses: SonarSource/sonarqube-quality-gate-action@v1
