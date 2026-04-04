@@ -21,3 +21,4 @@ print(dt.astimezone(pytz.timezone('America/Sao_Paulo')))
 print(1 == 1)
 
 print(1 != 1)
+print(1 > 1)
