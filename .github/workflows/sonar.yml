@@ -17,11 +17,11 @@ jobs:
       - name: SonarQube Scan
         run: |
           docker run --rm \
-            -v $GITHUB_WORKSPACE:/usr/src \
+            -v ${{ github.workspace }}:/usr/src \
             -e SONAR_HOST_URL="http://host.docker.internal:9000" \
             -e SONAR_TOKEN="${{ secrets.SONAR_TOKEN }}" \
             sonar-scanner-fixed:latest \
-            sonar-scanner \
+            /opt/sonar-scanner-*/bin/sonar-scanner \
               -Dsonar.projectKey=teste-local \
               -Dsonar.sources=.
 
