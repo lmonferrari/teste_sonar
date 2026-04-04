@@ -20,7 +20,7 @@ jobs:
             -v ${{ github.workspace }}:/usr/src \
             -e SONAR_HOST_URL="http://host.docker.internal:9000" \
             -e SONAR_TOKEN="${{ secrets.SONAR_TOKEN }}" \
-            sonar-scanner-fixed:latest \
+            sonar-scanner-fixed:latest -- \
             -Dsonar.projectKey=teste-local \
             -Dsonar.sources=.
 
