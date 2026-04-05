@@ -21,9 +21,9 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
         with:
-          scannerVersion: 10.0 # versão oficial do SonarScanner CLI
+          scannerVersion: 8.0.1.6346
         env:
-          SONAR_HOST_URL: http://host.docker.internal:9000
+          SONAR_HOST_URL: http://localhost:9000
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       - name: Quality Gate
         uses: SonarSource/sonarqube-quality-gate-action@v1
