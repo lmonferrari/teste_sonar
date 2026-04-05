@@ -1,10 +1,3 @@
-import pytz
-from datetime import datetime
-
-dt = pytz.timezone('America/New_York').localize(datetime(2022, 1, 1)) 
-
-print(3 != 1)
-
 class Teste:
     @staticmethod
     def teste():
@@ -14,11 +7,3 @@ class Teste:
         return 2
     
 print(Teste.teste())
-print(Teste().teste2())
-
-print(dt)
-
-print(1 == 1)
-print(2 == 2)
-print(3 == 3)
-print(4 == 4)
