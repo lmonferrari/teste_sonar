@@ -7,4 +7,3 @@ class Teste:
         return 2
     
 print(Teste.teste())
-print(Teste().teste2())
