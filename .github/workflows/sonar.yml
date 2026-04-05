@@ -19,7 +19,7 @@ jobs:
           path: ~/.sonar/cache
           key: sonar-${{ runner.os }}-${{ hashFiles('**/*.java') }} # cache baseado no hash do código
       - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v5
+        uses: SonarSource/sonarqube-scan-action@v6
         with:
           scannerVersion: 8.0.1.6346
         env:
